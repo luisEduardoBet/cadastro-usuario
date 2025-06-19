@@ -10,8 +10,8 @@ Este é um sistema completo de cadastro de usuários com frontend em React e bac
 
 ##  Clonando o repositório
 
-- git clone https://github.com/raquelalberti/projeto-cadastro.git
-- cd projeto-cadastro
+- git clone https://github.com/raquelalberti/cadastro-usuario.git
+- cd cadastro-usuario
 
 ## Backend
 

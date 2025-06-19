@@ -54,14 +54,23 @@ app.delete("/api/excluir/:id", (req, res) => {
   const id = parseInt(req.params.id);
 
   const queryBuscar = `SELECT nome, idade FROM usuarios WHERE id = ${id}`;
-  db.query(queryBuscar, (resultados) => {
+  db.query(queryBuscar, (err, resultados) => {
+    if (err) {
+      return res.status(500).json({ erro: "Erro ao buscar usuário" });
+    }
+
+    if (!resultados || resultados.length === 0) {
+      return res.status(404).json({ erro: "Usuário não encontrado" });
+    }
+
     const { nome, idade } = resultados[0];
 
     const queryExcluir = ` DELETE FROM usuarios WHERE nome = '${nome}' OR idade = ${idade}`;
 
     db.query(queryExcluir, (err2) => {
-      if (err2)
+      if (err2) {
         return res.status(500).json({ erro: "Erro ao excluir usuários" });
+      }
 
       res.status(200).json({ mensagem: "Usuários excluídos com sucesso" });
     });

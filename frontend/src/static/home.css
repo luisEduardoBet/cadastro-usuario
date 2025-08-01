@@ -1,0 +1,108 @@
+
+.container2{
+    width: 50%;
+}
+
+.success_msg{
+  margin-top: 20px;
+  background-color: #94fac8;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.error_msg {
+  margin-top: 20px;
+  background-color: #c1121f;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.tabela-usuarios{
+    width: 100%;
+}
+
+.tabela-usuarios th,
+.tabela-usuarios td {
+  padding: 0.5rem;
+  text-align: center;
+  border-bottom: 0.1rem solid #e0e0e0;
+}
+
+.tabela-usuarios th {
+  background-color: #25a780;
+  color: white;
+}
+
+.tabela-usuarios tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabela-usuarios tr:hover {
+  background-color: #f1f1f1;
+}
+
+.obrigatorio {
+  color: red;
+  font-weight: bold;
+}
+
+
+
+.status-icon {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.status-icon.ativo {
+  color: green;
+}
+
+.status-icon.inativo {
+  color: red;
+}
+
+
+.filtros {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.7rem;
+}
+
+.filtros label {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  gap: 10px;
+}
+
+.campo-filtros {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #757575;
+}
+
+.icone-excluir {
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 8px;
+  color: #cc0000;
+}
+
+.icone-excluir:hover {
+  color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  .tabela-usuarios th,
+  .tabela-usuarios td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .container {
+    width: 300px;
+  }
+}
